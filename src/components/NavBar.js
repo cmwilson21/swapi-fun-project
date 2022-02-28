@@ -11,8 +11,13 @@ import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
+import { NavLink } from "react-router-dom";
 
-const pages = ["People", "Planets", "Starships"];
+const pages = [
+  { title: "People", link: "/people" },
+  { title: "Planets", link: "/planets" },
+  { title: "Starships", link: "/starships" },
+];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const ResponsiveAppBar = () => {
@@ -77,8 +82,14 @@ const ResponsiveAppBar = () => {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                <MenuItem
+                  // key={page}
+                  id={page.title}
+                  onClick={handleCloseNavMenu}
+                >
+                  <Typography textAlign="center">
+                    <NavLink to={page.link}>{page.title}</NavLink>
+                  </Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -89,16 +100,17 @@ const ResponsiveAppBar = () => {
             component="div"
             sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
           >
-            Swapi Fun
+            <NavLink to="/">SwapiFun</NavLink>
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
               <Button
-                key={page}
+                // key={page}
+                id={page.title}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: "white", display: "block" }}
               >
-                {page}
+                <NavLink to={page.link}>{page.title}</NavLink>
               </Button>
             ))}
           </Box>
