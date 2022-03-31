@@ -12,7 +12,7 @@
   </a>
 </p>
 
-> This app was created as a fun project to learn how to interact and work with the Star Wars API.
+> This app was created as a fun project to learn how to interact and work with the Star Wars API. So far, I'm only building the options to sort through characters, planets, and vehicles. More to come!
 
 ### 🏠 [Homepage](https://google.com)
 
