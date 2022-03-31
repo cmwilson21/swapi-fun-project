@@ -13,7 +13,7 @@ export const PlanetsList = () => {
   const swGetter = () => {
     fetch(swapiUrl)
       .then((res) => res.json())
-      .then((data) => console.log("data", data));
+      .then((data) => setPlanets(data));
   };
 
   useEffect(() => {
@@ -23,13 +23,15 @@ export const PlanetsList = () => {
   console.log("line 25", swGetter[1]);
 
   // map through the planets array and return a div with the name of the planet
-  planets.map((planet) => {
+
+  const planetList = planets.map((planet) => {
     return <div>{planet.name}</div>;
   });
 
   return (
     <div>
       PlanetsList
+      {planetList}
       {PlanetCard}
     </div>
   );
