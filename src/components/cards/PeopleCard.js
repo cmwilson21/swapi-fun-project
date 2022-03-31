@@ -6,7 +6,8 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 
-export const PeopleCard = () => {
+export const PeopleCard = (person) => {
+  console.log("person", person);
   return (
     <div>
       <Card sx={{ maxWidth: 345 }}>
@@ -18,11 +19,13 @@ export const PeopleCard = () => {
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-            Lizard
+            {person.person.name}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
+            {person.person.gender.charAt(0).toUpperCase() +
+              person.person.gender.slice(1)}
+            <br />
+            {person.person.homeworld}
           </Typography>
         </CardContent>
         <CardActions>
