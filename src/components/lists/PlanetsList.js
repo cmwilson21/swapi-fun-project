@@ -13,28 +13,37 @@ export const PlanetsList = () => {
   const swGetter = () => {
     fetch(swapiUrl)
       .then((res) => res.json())
-      .then((data) => setPlanets(data));
+      .then((data) => setPlanets(data.results));
   };
+  console.log("results", planets);
 
   useEffect(() => {
     swGetter();
   }, []);
 
-  console.log("line 25", swGetter[1]);
-
-  // map through the planets array and return a div with the name of the planet
-
-  const planetList = planets.map((planet) => {
-    return <div>{planet.name}</div>;
-  });
-
   return (
     <div>
-      PlanetsList
-      {planetList}
-      {PlanetCard}
+      <h1>Planets List</h1>
+      {planets.map((planet) => (
+        <PlanetCard key={planet.name} planet={planet} />
+      ))}
     </div>
   );
 };
+
+// map through the planets array and return a div with the name of the planet
+
+// const planetList = planets.map((planet) => {
+//   return <div>{planet.name}</div>;
+// });
+
+//   return (
+//     <div>
+//       PlanetsList
+//       {/* {planetList} */}
+//       {/* {PlanetCard} */}
+//     </div>
+//   );
+// };
 
 // export default PlanetsList;
