@@ -7,7 +7,7 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 
 export const PeopleCard = (person) => {
-  console.log("person", person);
+  // console.log("person", person);
   const home = person.person.homeworld;
   return (
     <div>
