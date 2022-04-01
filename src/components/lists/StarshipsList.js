@@ -17,7 +17,6 @@ export const StarshipsList = () => {
 
   return (
     <div>
-      StarshipsList
       {starships.map((starship) => (
         <StarshipCard key={starship.id} starship={starship} />
       ))}
