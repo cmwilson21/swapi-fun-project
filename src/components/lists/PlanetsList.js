@@ -10,7 +10,7 @@ export const PlanetsList = () => {
 
   // create a function that will fetch the data from the swapi url
   // and return the data as a json object
-  const swGetter = () => {
+  const swGetterPlanets = () => {
     fetch(swapiUrl)
       .then((res) => res.json())
       .then((data) => setPlanets(data.results));
@@ -18,7 +18,7 @@ export const PlanetsList = () => {
   console.log("results", planets);
 
   useEffect(() => {
-    swGetter();
+    swGetterPlanets();
   }, []);
 
   return (
