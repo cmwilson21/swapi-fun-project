@@ -11,17 +11,27 @@ export const PlanetCard = (planet) => {
 
   return (
     <div>
-      <h1>{planet.planet.name}</h1>
-      <p>Climate: {planet.planet.climate}</p>
-      <p>Terrain: {planet.planet.terrain}</p>
-      <p>
-        Population:{" "}
-        {planet.planet.population
-          .toString()
-          .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
-      </p>
-      <p>Gravity: {planet.planet.gravity}</p>
-      <p>Residents: {residentList}</p>
+      <Card sx={{ maxWidth: 345 }}>
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="div">
+            {planet.planet.name}
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+            Climate: {planet.planet.climate}
+            <br />
+            Terrain: {planet.planet.terrain}
+            <br />
+            Population:{" "}
+            {planet.planet.population
+              .toString()
+              .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+            <br />
+            Gravity: {planet.planet.gravity}
+            <br />
+            Residents: {residentList}
+          </Typography>
+        </CardContent>
+      </Card>
     </div>
   );
 };
