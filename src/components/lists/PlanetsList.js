@@ -15,7 +15,7 @@ export const PlanetsList = () => {
       .then((res) => res.json())
       .then((data) => setPlanets(data.results));
   };
-  // console.log("results", planets);
+  console.log("planets", planets);
 
   useEffect(() => {
     swGetterPlanets();
