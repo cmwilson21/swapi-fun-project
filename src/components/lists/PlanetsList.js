@@ -22,28 +22,10 @@ export const PlanetsList = () => {
   }, []);
 
   return (
-    <div>
-      <h1>Planets List</h1>
+    <div className="list">
       {planets.map((planet) => (
         <PlanetCard key={planet.id} planet={planet} />
       ))}
     </div>
   );
 };
-
-// map through the planets array and return a div with the name of the planet
-
-// const planetList = planets.map((planet) => {
-//   return <div>{planet.name}</div>;
-// });
-
-//   return (
-//     <div>
-//       PlanetsList
-//       {/* {planetList} */}
-//       {/* {PlanetCard} */}
-//     </div>
-//   );
-// };
-
-// export default PlanetsList;
