@@ -1,4 +1,7 @@
 import React from "react";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import Typography from "@mui/material/Typography";
 
 export const PlanetCard = (planet) => {
   // create a map to go through the residents array and return a div with the name of the resident
