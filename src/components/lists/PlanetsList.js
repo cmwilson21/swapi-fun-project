@@ -22,7 +22,7 @@ export const PlanetsList = () => {
   }, []);
 
   return (
-    <div className="list">
+    <div>
       {planets.map((planet) => (
         <PlanetCard key={planet.id} planet={planet} />
       ))}
