@@ -30,3 +30,11 @@ code {
   /* border: 3px solid blue; */
   padding: 10px;
 }
+
+.navbar_link {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
