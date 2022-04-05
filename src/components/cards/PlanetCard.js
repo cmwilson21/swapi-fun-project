@@ -28,7 +28,7 @@ export const PlanetCard = (planet) => {
             <br />
             Gravity: {planet.planet.gravity}
             <br />
-            Residents: {residentList}
+            {/* Residents: {residentList} */}
           </Typography>
         </CardContent>
       </Card>
