@@ -5,7 +5,7 @@ import Typography from "@mui/material/Typography";
 
 export const PeopleCard = (person) => {
   // console.log("person", person);
-  const home = person.person.homeworld;
+  // const home = person.person.homeworld;
   return (
     <div>
       <Card className="card" sx={{ maxWidth: 345 }}>
@@ -17,7 +17,7 @@ export const PeopleCard = (person) => {
             {person.person.gender.charAt(0).toUpperCase() +
               person.person.gender.slice(1)}
             <br />
-            {home}
+            {/* {home} */}
           </Typography>
         </CardContent>
       </Card>
